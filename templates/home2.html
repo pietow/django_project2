@@ -1,0 +1,10 @@
+<h1>{{ key1 }}</h1>
+<p>{{ key2 }}</p>
+{% for item in key3 %}
+    {{ item | add:100 }}
+{% endfor %}
+
+{% load my_tags %}
+
+<h1>{% hello_world %}</h1>
+
