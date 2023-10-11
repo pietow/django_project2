@@ -1,10 +1,13 @@
 <h1>{{ key1 }}</h1>
-<p>{{ key2 }}</p>
+<p>{{ key2 | add:'txt' }}</p>
 {% for item in key3 %}
     {{ item | add:100 }}
 {% endfor %}
 
-{% load my_tags %}
+{% load my_tags footer_tags custom_split %}
 
 <h1>{% hello_world %}</h1>
 
+{% render_footer "AwesomeCo" %}
+
+<p>{{ "This,is,a,test"|custom_split:"," }}</p>
