@@ -27,7 +27,10 @@ class HomePageView(TemplateView):
 
 # function based view: direct access to the request object
 def homePageView(request):
-    print(request)
+    print(request.META)
+    print('#' * 80)
+    print(request.headers)
+    print('#' * 80)
     context = {
         'key1': 'value1',
         'key2': 'value2',
